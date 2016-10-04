@@ -23,7 +23,7 @@ public class MenuController extends NotMoveController {
     }
 
     public MoveController getMoveController(int option) {
-        assert option > 0 && option < NUMBER_OF_CONTROLLERS;
+        assert option > 0 && option <= NUMBER_OF_CONTROLLERS;
         return controllers[option - 1];
     }
 
