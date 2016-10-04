@@ -5,8 +5,6 @@ import java.util.List;
 public class Waste extends CardList {
     
     private static final int MIN_VISIBLE_CARDS = 1;
-    
-    private static final int MAX_VISIBLE_CARDS = 3;
 
     public Waste() {
         super();
@@ -19,7 +17,7 @@ public class Waste extends CardList {
             assert card.isFlippedUp();
         }
         super.addCards(cards);
-        super.setVisibleCards(MAX_VISIBLE_CARDS);
+        super.setVisibleCards(cards.size());
     }
     
     @Override

@@ -23,6 +23,7 @@ public class MenuView implements MoveControllerVisitor {
 
     public void interact() {
         IO io = new IO();
+        new BoardView(menuController).write();
         io.writeln("---------------------------");
         io.writeln("1. Mover de baraja a descarte");
         io.writeln("2. Mover de descarte a baraja");
@@ -39,7 +40,12 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(StockToWasteController stockToWasteController) {
-        new IO().writeln(stockToWasteController.getClass().getName());
+        klondike.controller.Error error = stockToWasteController.validateStock();
+        if (error != null) {
+            new IO().writeln(error.toString());
+        } else {
+            stockToWasteController.moveCardsFromStockToWaste();
+        }
     }
 
     @Override

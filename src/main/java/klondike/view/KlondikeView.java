@@ -9,7 +9,6 @@ public class KlondikeView implements NotMoveControllerVisitor {
 
     public void interact(NotMoveController controller) {
         controller.accept(this);
-        new BoardView(controller).write();
     }
 
     @Override
