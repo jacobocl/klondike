@@ -31,6 +31,7 @@ public class Card {
     }
 
     public NumberDistance distanceBetweenCardNumber(Card card) {
+        assert card != null;
         return this.number.distance(card.number);
     }
     

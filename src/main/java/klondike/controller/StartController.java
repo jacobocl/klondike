@@ -6,15 +6,15 @@ import klondike.model.Card;
 import klondike.model.CardListIndex;
 import klondike.model.Game;
 import klondike.model.GameState;
+import klondike.view.KlondikeView;
 
-public class StartController extends Controller {
+public class StartController extends NotMoveController {
 
     public StartController(Game game) {
         super(game);
     }
 
-    @Override
-    public void control() {
+    public void initialiceGame() {
         for (int i = 0; i < CardListIndex.numberOfTableauPiles(); i++) {
             List<Card> cards = this.getCards(CardListIndex.STOCK, i + 1);
             this.removeCards(CardListIndex.STOCK, i + 1);
@@ -22,5 +22,10 @@ public class StartController extends Controller {
             this.addCards(CardListIndex.tableauPileIndex(i), cards);
         }
         this.setGameState(GameState.IN_GAME);
+    }
+
+    @Override
+    public void accept(KlondikeView klondikeView) {
+        klondikeView.visit(this);
     }
 }

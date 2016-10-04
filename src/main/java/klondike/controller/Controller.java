@@ -12,6 +12,7 @@ public abstract class Controller {
     private Game game;
 
     public Controller(Game game) {
+        assert game != null;
         this.game = game;
     }
 
@@ -54,7 +55,5 @@ public abstract class Controller {
     public int size(CardListIndex cardListIndex) {
         return game.size(cardListIndex);
     }
-    
-    public abstract void control();
 
 }

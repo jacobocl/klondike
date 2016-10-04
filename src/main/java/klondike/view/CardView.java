@@ -7,7 +7,7 @@ public class CardView {
 
     private static final String[] NUMBERS = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
 
-    private static final String[] SUITS = {"♣", "♦", "♠", "♥"};
+    public static final String[] SUITS = {"♣", "♦", "♠", "♥"};
 
     private Card card;
 

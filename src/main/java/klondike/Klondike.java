@@ -1,34 +1,31 @@
 package klondike;
 
-import klondike.controller.Controller;
-import klondike.controller.StartController;
-import klondike.model.Game;
-import klondike.view.ControllerView;
-import klondike.view.OptionView;
+import klondike.controller.Logic;
+import klondike.controller.NotMoveController;
+import klondike.view.KlondikeView;
 
 public class Klondike {
 
-    private ControllerView controllerView;
+    Logic logic;
 
-    private OptionView optionView;
+    private KlondikeView klondikeView;
 
-    public Klondike(ControllerView controllerView, OptionView optionView) {
-        this.controllerView = controllerView;
-        this.optionView = optionView;
+    public Klondike() {
+        logic = new Logic();
+        klondikeView = new KlondikeView();
     }
 
     public void play() {
-        //TODO: Repensar
-        Controller controller = new StartController(new Game());
+        NotMoveController controller;
         do {
+            controller = logic.getController();
             if (controller != null) {
-                controllerView.interact(controller);
+                klondikeView.interact(controller);
             }
-            controller = optionView.getMoveController();
         } while (controller != null);
     }
 
     public static void main(String[] args) {
-        new Klondike(new ControllerView(), new OptionView()).play();
+        new Klondike().play();
     }
 }

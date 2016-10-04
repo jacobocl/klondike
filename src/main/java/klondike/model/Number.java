@@ -4,6 +4,7 @@ public enum Number {
     ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING;
 
     public NumberDistance distance(Number number) {
+        assert number != null;
         int distance = this.ordinal() - number.ordinal();
         switch (distance) {
         case 1:
