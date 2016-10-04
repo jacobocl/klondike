@@ -15,28 +15,20 @@ public class Stock extends CardList {
             }
         }
         Collections.shuffle(unorderedCards);
-        for (Card card : unorderedCards) {
-            add(card);
+        addCards(unorderedCards);
+    }
+
+    @Override
+    public void addCards(List<Card> cards) {
+        for (Card card : cards) {
+            card.setFlippedUp(false);
         }
+        super.addCards(cards);
     }
 
     @Override
-    public void add(Card card) {
-        assert card != null;
-        card.setFlippedUp(false);
-        getCards().add(card);
-    }
-
-    @Override
-    public Card get() {
-        assert getCards().size() >= 1;
-        return getCards().get(getCards().size() - 1);
-    }
-
-    @Override
-    public Card remove() {
-        assert getCards().size() >= 1;
-        return getCards().remove(getCards().size() - 1);
+    public void remove(int numberOfCards) {
+        super.remove(numberOfCards);
     }
 
 }

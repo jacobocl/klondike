@@ -1,30 +1,27 @@
 package klondike.model;
 
+import java.util.List;
+
 public class Foundation extends CardList {
+    
+    private static final int VISIBLE_CARDS = 1;
 
     public Foundation() {
         super();
+        super.setVisibleCards(VISIBLE_CARDS);
     }
 
     @Override
-    public void add(Card card) {
-        assert card != null;
-        assert card.isFlippedUp();
-        getCards().add(card);
+    public void addCards(List<Card> cards) {
+        for (Card card : cards) {
+            assert card.isFlippedUp();
+        }
+        super.addCards(cards);
     }
 
     @Override
-    public Card get() {
-        assert getCards().size() >= 1;
-        return getCards().get(getCards().size() - 1);
-    }
-
-    @Override
-    public Card remove() {
-        assert getCards().size() >= 1;
-        Card card = getCards().remove(getCards().size());
-        getCards().get(getCards().size()).setFlippedUp(true);
-        return card;
+    public void remove(int numberOfCards) {
+        super.remove(numberOfCards);
     }
 
 }

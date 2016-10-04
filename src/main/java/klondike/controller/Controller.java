@@ -3,6 +3,7 @@ package klondike.controller;
 import java.util.List;
 
 import klondike.model.Card;
+import klondike.model.CardListIndex;
 import klondike.model.Game;
 import klondike.model.GameState;
 
@@ -19,90 +20,41 @@ public abstract class Controller {
     }
 
     public void setGameState(GameState state) {
-        assert state != null;
         game.setGameState(state);
     }
 
-    public Card getCardFromStock() {
-        return game.getCardFromStock();
+    public Card getCard(CardListIndex cardListIndex) {
+        return game.getCard(cardListIndex);
     }
 
-    public Card getCardFromWaste() {
-        return game.getCardFromWaste();
+    public List<Card> getCards(CardListIndex cardListIndex, int numberOfCards) {
+        return game.getCards(cardListIndex, numberOfCards);
+    }
+
+    public void removeCards(CardListIndex cardListIndex, int numberOfCards) {
+        game.removeCards(cardListIndex, numberOfCards);
+    }
+
+    public void addCard(CardListIndex cardListIndex, Card card) {
+        game.addCard(cardListIndex, card);
+    }
+
+    public void addCards(CardListIndex cardListIndex, List<Card> cards) {
+        game.addCards(cardListIndex, cards);
+    }
+
+    public boolean isListOfCardsEmpty(CardListIndex cardListIndex) {
+        return game.isListOfCardsEmpty(cardListIndex);
+    }
+
+    public int getVisibleCards(CardListIndex cardListIndex) {
+        return game.getVisibleCards(cardListIndex);
+    }
+
+    public int size(CardListIndex cardListIndex) {
+        return game.size(cardListIndex);
     }
     
-    public List<Card> getVisibleCardsFromWaste() {
-        return game.getVisibleCardsFromWaste();
-    }
-
-    public Card getCardFromFoundation(int foundation) {
-        return game.getCardFromFoundation(foundation);
-    }
-
-    public Card getCardFromTableauPile(int tableauPile) {
-        return game.getCardFromTableauPile(tableauPile);
-    }
-    
-    public List<Card> getVisibleCardsTableauPile(int tableauPile) {
-        return game.getVisibleCardsTableauPile(tableauPile);
-    }
-    
-    public int getFlippedDownCardsFromTableauPile(int tableauPile) {
-        return game.getFlippedDownCardsFromTableauPile(tableauPile);
-    }
-
-    public Card removeCardFromStock() {
-        return game.removeCardFromStock();
-    }
-
-    public Card removeCardFromWaste() {
-        return game.removeCardFromWaste();
-    }
-
-    public Card removeCardFromFoundation(int foundation) {
-        return game.removeCardFromFoundation(foundation);
-    }
-
-    public Card removeCardFromTableauPile(int tableauPile) {
-        return game.removeCardFromTableauPile(tableauPile);
-    }
-
-    public void addCardToStock(Card card) {
-        assert card != null;
-        game.addCardToStock(card);
-    }
-
-    public void addCardToWaste(Card card) {
-        assert card != null;
-        game.addCardToWaste(card);
-    }
-
-    public void addCardToFoundation(Card card, int foundation) {
-        assert card != null;
-        game.addCardToFoundation(card, foundation);
-    }
-
-    public void addCardToTableauPile(Card card, int tableauPile) {
-        assert card != null;
-        game.addCardToTableauPile(card, tableauPile);
-    }
-
-    public boolean isStockEmpty() {
-        return game.isStockEmpty();
-    }
-
-    public boolean isWasteEmpty() {
-        return game.isWasteEmpty();
-    }
-
-    public boolean isFoundationEmpty(int foundation) {
-        return game.isFoundationEmpty(foundation);
-    }
-
-    public boolean isTableauPileEmpty(int tableauPile) {
-        return game.isTableauPileEmpty(tableauPile);
-    }
-
     public abstract void control();
 
 }

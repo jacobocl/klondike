@@ -1,127 +1,70 @@
 package klondike.model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Game {
 
-    private Stock stock;
-
-    private Waste waste;
-
-    private Foundation[] foundations;
-
-    private TableauPile[] tableau;
+    private Map<CardListIndex, CardList> listsOfCards;
 
     private GameState state;
 
-    public static int NUM_FOUNDATIONS = 4;
-
-    public static int NUM_TABLEAU_PILES = 7;
-
     public Game() {
-        stock = new Stock();
-        waste = new Waste();
-        foundations = new Foundation[NUM_FOUNDATIONS];
-        for (int i = 0; i < NUM_FOUNDATIONS; i++) {
-            foundations[i] = new Foundation();
+        listsOfCards = new HashMap<CardListIndex, CardList>();
+        listsOfCards.put(CardListIndex.STOCK, new Stock());
+        listsOfCards.put(CardListIndex.WASTE, new Waste());
+        for (int i = 0; i < CardListIndex.numberOfFoundations(); i++) {
+            listsOfCards.put(CardListIndex.foundationIndex(i), new Foundation());
         }
-        tableau = new TableauPile[NUM_TABLEAU_PILES];
-        for (int i = 0; i < NUM_TABLEAU_PILES; i++) {
-            tableau[i] = new TableauPile();
+        for (int i = 0; i < CardListIndex.numberOfTableauPiles(); i++) {
+            listsOfCards.put(CardListIndex.tableauPileIndex(i), new TableauPile());
         }
         state = GameState.INITIAL;
     }
-    
+
     public GameState getState() {
         return state;
     }
-    
-    public void setGameState(GameState state){
+
+    public void setGameState(GameState state) {
         this.state = state;
     }
 
-    public Card getCardFromStock() {
-        return stock.get();
-    }
-    
-    public Card getCardFromWaste() {
-        return waste.get();
-    }
-    
-    public List<Card> getVisibleCardsFromWaste() {
-        return waste.getVisibleCards();
-    }
-    
-    public Card getCardFromFoundation(int foundation) {
-        assert foundation >= 0 && foundation < NUM_FOUNDATIONS;
-        return foundations[foundation].get();
-    }
-    
-    public Card getCardFromTableauPile(int tableauPile) {
-        assert tableauPile >= 0 && tableauPile < NUM_TABLEAU_PILES;
-        return tableau[tableauPile].get();
-    }
-    
-    public List<Card> getVisibleCardsTableauPile(int tableauPile) {
-        return tableau[tableauPile].getVisibleCards();
-    }
-    
-    public Card removeCardFromStock() {
-        return stock.remove();
-    }
-    
-    public Card removeCardFromWaste() {
-        return waste.remove();
-    }
-    
-    public Card removeCardFromFoundation(int foundation) {
-        assert foundation >= 0 && foundation < NUM_FOUNDATIONS;
-        return foundations[foundation].remove();
-    }
-    
-    public Card removeCardFromTableauPile(int tableauPile) {
-        assert tableauPile >= 0 && tableauPile < NUM_TABLEAU_PILES;
-        return tableau[tableauPile].remove();
-    }
-    
-    public void addCardToStock(Card card) {
-        stock.add(card);
-    }
-    
-    public void addCardToWaste(Card card) {
-        waste.add(card);
-    }
-    
-    public void addCardToFoundation(Card card, int foundation) {
-        assert foundation >= 0 && foundation < NUM_FOUNDATIONS;
-        foundations[foundation].add(card);
-    }
-    
-    public void addCardToTableauPile(Card card, int tableauPile) {
-        assert tableauPile >= 0 && tableauPile < NUM_TABLEAU_PILES;
-        tableau[tableauPile].add(card);
-    }
-    
-    public boolean isStockEmpty() {
-        return stock.isEmpty();
-    }
-    
-    public boolean isWasteEmpty() {
-        return waste.isEmpty();
-    }
-    
-    public boolean isFoundationEmpty(int foundation) {
-        assert foundation >= 0 && foundation < NUM_FOUNDATIONS;
-        return foundations[foundation].isEmpty();
-    }
-    
-    public boolean isTableauPileEmpty(int tableauPile) {
-        assert tableauPile >= 0 && tableauPile < NUM_TABLEAU_PILES;
-        return tableau[tableauPile].isEmpty();
+    public Card getCard(CardListIndex cardListIndex) {
+        return listsOfCards.get(cardListIndex).getCard();
     }
 
-    public int getFlippedDownCardsFromTableauPile(int tableauPile) {
-        assert tableauPile >= 0 && tableauPile < NUM_TABLEAU_PILES;
-        return tableau[tableauPile].flippedDownCards();
+    public List<Card> getCards(CardListIndex cardListIndex, int numberOfCards) {
+        return listsOfCards.get(cardListIndex).getCards(numberOfCards);
+    }
+
+    public void removeCards(CardListIndex cardListIndex, int numberOfCards) {
+        listsOfCards.get(cardListIndex).remove(numberOfCards);
+    }
+
+    public void addCard(CardListIndex cardListIndex, Card card) {
+        assert card != null;
+        List<Card> cardList = new ArrayList<Card>();
+        cardList.add(card);
+        listsOfCards.get(cardListIndex).addCards(cardList);
+    }
+
+    public void addCards(CardListIndex cardListIndex, List<Card> cards) {
+        assert cards != null;
+        listsOfCards.get(cardListIndex).addCards(cards);
+    }
+
+    public boolean isListOfCardsEmpty(CardListIndex cardListIndex) {
+        return listsOfCards.get(cardListIndex).isEmpty();
+    }
+
+    public int getVisibleCards(CardListIndex cardListIndex) {
+        return listsOfCards.get(cardListIndex).getVisibleCards();
+    }
+
+    public int size(CardListIndex cardListIndex) {
+        return listsOfCards.get(cardListIndex).size();
     }
 }

@@ -7,25 +7,59 @@ public abstract class CardList {
 
     private List<Card> cards;
 
-    public CardList() {
-        this.cards = new ArrayList<Card>();
-    }
+    private int visibleCards;
 
-    protected List<Card> getCards() {
-        return cards;
+    public CardList() {
+        cards = new ArrayList<Card>();
+        visibleCards = 0;
     }
 
     public int size() {
         return cards.size();
     }
-    
+
     public boolean isEmpty() {
         return cards.isEmpty();
     }
 
-    public abstract void add(Card card);
+    public void addCards(List<Card> cards) {
+        assert cards != null;
+        for (Card card : cards) {
+            assert card != null;
+        }
+        this.cards.addAll(cards);
+    }
 
-    public abstract Card get();
+    public List<Card> getCards(int numberOfCards) {
+        assert cards.size() >= 1;
+        assert numberOfCards <= cards.size();
+        List<Card> cardsToGet = new ArrayList<Card>();
+        for (int i = numberOfCards ; i > 0; i--) {
+            cardsToGet.add(cards.get(cards.size() - i));
+        }
+        return cardsToGet;
+    }
 
-    public abstract Card remove();
+    public Card getCard() {
+        assert cards.size() >= 1;
+        return cards.get(cards.size() - 1);
+    }
+
+    public void remove(int numberOfCards) {
+        for (int i = 0; i < numberOfCards; i++) {
+            cards.remove(cards.size() - 1);
+        }
+    }
+
+    protected void setVisibleCards(int visibleCards) {
+        this.visibleCards = visibleCards;
+    }
+
+    public int getVisibleCards() {
+        return visibleCards;
+    }
+    
+    public int invisibleCards() {
+        return this.size() - visibleCards;
+    }
 }

@@ -2,26 +2,24 @@ package klondike.view;
 
 import klondike.controller.Controller;
 import klondike.model.Card;
+import klondike.model.CardListIndex;
 import klondike.utils.IO;
 
 public class TableauPileView extends CardListView {
 
-    int tableauPile;
-
-    public TableauPileView(Controller controller, int tableauPile) {
-        super(controller);
-        this.tableauPile = tableauPile;
+    public TableauPileView(Controller controller, CardListIndex tableauPile) {
+        super(controller, tableauPile);
     }
 
     @Override
     protected void ownView() {
-        if (this.isTableauPileEmpty(tableauPile)) {
+        if (this.isCardListEmpty()) {
             new IO().write(this.emptyCardList());
         } else {
-            for (int i = 0; i < getFlippedDownCardsFromTableauPile(tableauPile); i++) {
+            for (int i = 0; i < flippedDownCards(); i++) {
                 new IO().write("[");
             }
-            for (Card card : getVisibleCardsFromTableauPile(tableauPile)) {
+            for (Card card : getVisibleCards()) {
                 new CardView(card).write();
             }
         }

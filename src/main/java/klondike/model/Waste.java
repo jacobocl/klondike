@@ -4,38 +4,38 @@ import java.util.List;
 
 public class Waste extends CardList {
     
-    private int visibleCards;
+    private static final int MIN_VISIBLE_CARDS = 1;
+    
+    private static final int MAX_VISIBLE_CARDS = 3;
 
     public Waste() {
         super();
-        visibleCards = 0;
+        super.setVisibleCards(MIN_VISIBLE_CARDS);
     }
 
     @Override
-    public void add(Card card) {
-        assert card != null;
-        card.setFlippedUp(true);
-        getCards().add(card);
-        visibleCards = 3;
-    }
-
-    @Override
-    public Card get() {
-        assert getCards().size() >= 1;
-        return getCards().get(getCards().size() - 1);
-    }
-
-    @Override
-    public Card remove() {
-        assert getCards().size() >= 1;
-        if (visibleCards > 1) {
-            visibleCards--;
+    public void addCards(List<Card> cards) {
+        for (Card card : cards) {
+            assert card.isFlippedUp();
         }
-        return getCards().remove(getCards().size() - 1);
+        super.addCards(cards);
+        super.setVisibleCards(MAX_VISIBLE_CARDS);
+    }
+    
+    @Override
+    public List<Card> getCards(int numberOfCards) {
+        assert numberOfCards <= super.getVisibleCards();
+        return super.getCards(numberOfCards);
     }
 
-    public List<Card> getVisibleCards() {
-        return getCards().subList(getCards().size() - visibleCards, getCards().size());
+    @Override
+    public void remove(int numberOfCards) {
+        assert numberOfCards <= super.getVisibleCards();
+        if (super.getVisibleCards() - numberOfCards > MIN_VISIBLE_CARDS) {
+            super.setVisibleCards(super.getVisibleCards() - numberOfCards);
+        } else {
+            super.setVisibleCards(MIN_VISIBLE_CARDS);
+        }
     }
 
 }

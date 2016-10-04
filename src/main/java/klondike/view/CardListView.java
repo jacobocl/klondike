@@ -4,15 +4,19 @@ import java.util.List;
 
 import klondike.controller.Controller;
 import klondike.model.Card;
+import klondike.model.CardListIndex;
 import klondike.utils.IO;
 
 public abstract class CardListView {
     
     private Controller controller;
+    
+    private CardListIndex cardListIndex;
 
-    public CardListView(Controller controller) {
+    public CardListView(Controller controller, CardListIndex cardListIndex) {
         super();
         this.controller = controller;
+        this.cardListIndex = cardListIndex;
     }
 
     public void write(String title) {
@@ -26,48 +30,21 @@ public abstract class CardListView {
         return "<Vacío>";
     }
     
-    protected boolean isStockEmpty() {
-        return controller.isStockEmpty();
+    protected boolean isCardListEmpty() {
+        return controller.isListOfCardsEmpty(cardListIndex);
     }
     
-    protected boolean isWasteEmpty() {
-        return controller.isWasteEmpty();
+    public Card getCard() {
+        return controller.getCard(cardListIndex);
     }
     
-    protected boolean isFoundationEmpty(int foundation) {
-        return controller.isFoundationEmpty(foundation);
+    public List<Card> getVisibleCards() {
+        int visibleCards = controller.getVisibleCards(cardListIndex);
+        return controller.getCards(cardListIndex, visibleCards);
     }
     
-    protected boolean isTableauPileEmpty(int tableau) {
-        return controller.isTableauPileEmpty(tableau);
-    }
-    
-    public Card getCardFromStock() {
-        return controller.getCardFromStock();
-    }
-    
-    public List<Card> getVisibleCardsFromWaste() {
-        return controller.getVisibleCardsFromWaste();
-    }
-
-    public Card getCardFromWaste() {
-        return controller.getCardFromWaste();
-    }
-
-    public Card getCardFromFoundation(int foundation) {
-        return controller.getCardFromFoundation(foundation);
-    }
-
-    public Card getCardFromTableauPile(int tableauPile) {
-        return controller.getCardFromTableauPile(tableauPile);
-    }
-    
-    public List<Card> getVisibleCardsFromTableauPile(int tableauPile) {
-        return controller.getVisibleCardsTableauPile(tableauPile);
-    }
-    
-    public int getFlippedDownCardsFromTableauPile(int tableauPile) {
-        return controller.getFlippedDownCardsFromTableauPile(tableauPile);
+    public int flippedDownCards() {
+        return controller.size(cardListIndex) - controller.getVisibleCards(cardListIndex);
     }
 
     protected abstract void ownView();

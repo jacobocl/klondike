@@ -1,23 +1,21 @@
 package klondike.view;
 
 import klondike.controller.Controller;
+import klondike.model.CardListIndex;
 import klondike.utils.IO;
 
 public class FoundationView extends CardListView {
 
-    int foundation;
-
-    public FoundationView(Controller controller, int foundation) {
-        super(controller);
-        this.foundation = foundation;
+    public FoundationView(Controller controller, CardListIndex foundation) {
+        super(controller, foundation);
     }
 
     @Override
     protected void ownView() {
-        if (this.isFoundationEmpty(foundation)) {
+        if (this.isCardListEmpty()) {
             new IO().write(this.emptyCardList());
         } else {
-            new CardView(getCardFromFoundation(foundation)).write();
+            new CardView(getCard()).write();
         }
     }
 
