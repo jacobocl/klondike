@@ -1,7 +1,14 @@
 package klondike.view;
 
+import klondike.controller.ExitController;
+import klondike.controller.FoundationToTableauPileController;
 import klondike.controller.MenuController;
 import klondike.controller.StockToWasteController;
+import klondike.controller.TableauPileToFoundationController;
+import klondike.controller.TableauPileToTableauPileController;
+import klondike.controller.WasteToFoundationController;
+import klondike.controller.WasteToStockController;
+import klondike.controller.WasteToTableauPileController;
 import klondike.controller.MoveControllerVisitor;
 import klondike.utils.IO;
 import klondike.utils.LimitedIntDialog;
@@ -32,7 +39,42 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(StockToWasteController stockToWasteController) {
-        new IO().writeln("StockToWasteController");
+        new IO().writeln(stockToWasteController.getClass().getName());
+    }
+
+    @Override
+    public void visit(WasteToStockController wasteToStockController) {
+        new IO().writeln(wasteToStockController.getClass().getName());
+    }
+
+    @Override
+    public void visit(WasteToFoundationController wasteToFoundationController) {
+        new IO().writeln(wasteToFoundationController.getClass().getName());     
+    }
+
+    @Override
+    public void visit(WasteToTableauPileController wasteToTableauPileController) {
+        new IO().writeln(wasteToTableauPileController.getClass().getName());
+    }
+
+    @Override
+    public void visit(TableauPileToFoundationController tableauPileToFoundationController) {
+        new IO().writeln(tableauPileToFoundationController.getClass().getName());
+    }
+
+    @Override
+    public void visit(TableauPileToTableauPileController tableauPileToTableauPileController) {
+        new IO().writeln(tableauPileToTableauPileController.getClass().getName());
+    }
+
+    @Override
+    public void visit(FoundationToTableauPileController foundationToTableauPileController) {
+        new IO().writeln(foundationToTableauPileController.getClass().getName());
+    }
+
+    @Override
+    public void visit(ExitController exitController) {
+        new IO().writeln(exitController.getClass().getName());
     }
 
 }
