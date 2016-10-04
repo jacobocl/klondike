@@ -22,18 +22,17 @@ public class Waste extends CardList {
     
     @Override
     public List<Card> getCards(int numberOfCards) {
-        assert numberOfCards <= super.getVisibleCards();
         return super.getCards(numberOfCards);
     }
 
     @Override
     public void remove(int numberOfCards) {
-        assert numberOfCards <= super.getVisibleCards();
         if (super.getVisibleCards() - numberOfCards > MIN_VISIBLE_CARDS) {
             super.setVisibleCards(super.getVisibleCards() - numberOfCards);
         } else {
             super.setVisibleCards(MIN_VISIBLE_CARDS);
         }
+        super.remove(numberOfCards);
     }
 
 }

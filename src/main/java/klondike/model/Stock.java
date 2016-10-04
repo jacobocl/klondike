@@ -23,7 +23,15 @@ public class Stock extends CardList {
         for (Card card : cards) {
             card.setFlippedUp(false);
         }
+        Collections.reverse(cards);
         super.addCards(cards);
+    }
+    
+    @Override
+    public List<Card> getCards(int numberOfCards) {
+        List<Card> cardsToGet = super.getCards(numberOfCards);
+        Collections.reverse(cardsToGet);
+        return cardsToGet;
     }
 
     @Override

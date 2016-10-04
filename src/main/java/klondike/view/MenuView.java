@@ -50,7 +50,12 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(WasteToStockController wasteToStockController) {
-        new IO().writeln(wasteToStockController.getClass().getName());
+        klondike.controller.Error error = wasteToStockController.validateWaste();
+        if (error != null) {
+            new IO().writeln(error.toString());
+        } else {
+            wasteToStockController.moveCardsFromWasteToStock();
+        }
     }
 
     @Override
