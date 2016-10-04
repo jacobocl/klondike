@@ -2,6 +2,7 @@ package klondike.view;
 
 import klondike.controller.Controller;
 import klondike.model.CardListIndex;
+import klondike.utils.IO;
 
 public class BoardView {
     
@@ -13,6 +14,8 @@ public class BoardView {
     }
 
     public void write () {
+        IO io = new IO();
+        io.writeln("===========================");
         new StockView(controller).write("Baraja");
         new WasteView(controller).write("Descarte");
         for (int i = 0; i < CardListIndex.numberOfFoundations(); i++) {

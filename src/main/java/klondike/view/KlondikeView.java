@@ -1,11 +1,11 @@
 package klondike.view;
 
-import klondike.controller.ControllerVisitor;
+import klondike.controller.NotMoveControllerVisitor;
 import klondike.controller.NotMoveController;
-import klondike.controller.OptionController;
+import klondike.controller.MenuController;
 import klondike.controller.StartController;
 
-public class KlondikeView implements ControllerVisitor {
+public class KlondikeView implements NotMoveControllerVisitor {
 
     public void interact(NotMoveController controller) {
         controller.accept(this);
@@ -18,8 +18,8 @@ public class KlondikeView implements ControllerVisitor {
     }
 
     @Override
-    public void visit(OptionController optionController) {
-        new OptionView(optionController).interact();
+    public void visit(MenuController optionController) {
+        new MenuView(optionController).interact();
     }
 
 }

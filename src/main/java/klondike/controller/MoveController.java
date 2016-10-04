@@ -1,7 +1,7 @@
 package klondike.controller;
 
 import klondike.model.Game;
-import klondike.view.OptionView;
+import klondike.view.MenuView;
 
 public abstract class MoveController extends Controller {
 
@@ -9,5 +9,5 @@ public abstract class MoveController extends Controller {
         super(game);
     }
 
-    public abstract void accept(OptionView optionView);
+    public abstract void accept(MenuView optionView);
 }

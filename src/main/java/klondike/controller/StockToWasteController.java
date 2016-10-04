@@ -1,7 +1,7 @@
 package klondike.controller;
 
 import klondike.model.Game;
-import klondike.view.OptionView;
+import klondike.view.MenuView;
 
 public class StockToWasteController extends MoveController {
 
@@ -10,7 +10,7 @@ public class StockToWasteController extends MoveController {
     }
 
     @Override
-    public void accept(OptionView optionView) {
+    public void accept(MenuView optionView) {
         optionView.visit(this);
     }
 

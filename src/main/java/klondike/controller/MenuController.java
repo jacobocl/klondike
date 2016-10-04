@@ -3,16 +3,16 @@ package klondike.controller;
 import klondike.model.Game;
 import klondike.view.KlondikeView;
 
-public class OptionController extends NotMoveController {
+public class MenuController extends NotMoveController {
     
     private MoveController[] controllers;
 
     public static int NUMBER_OF_CONTROLLERS = 8;
 
-    public OptionController(Game game) {
+    public MenuController(Game game) {
         super(game);
         controllers = new MoveController[NUMBER_OF_CONTROLLERS];
-//        controllers[0] = new StockToWasteController(game);
+        controllers[0] = new StockToWasteController(game);
 //        controllers[1] = new WasteToStockController(game);
 //        controllers[2] = new WasteToFoundationController(game);
 //        controllers[3] = new WasteToTableauPileController(game);
@@ -24,7 +24,7 @@ public class OptionController extends NotMoveController {
 
     public MoveController getMoveController(int option) {
         assert option > 0 && option < NUMBER_OF_CONTROLLERS;
-        return controllers[option];
+        return controllers[option - 1];
     }
 
     @Override

@@ -8,12 +8,12 @@ public class Logic {
         
         private StartController startController;
 
-        private OptionController optionController;
+        private MenuController optionController;
 
         public Logic() {
             game = new Game();
             startController = new StartController(game);
-            optionController = new OptionController(game);
+            optionController = new MenuController(game);
         }
 
         public NotMoveController getController() {
