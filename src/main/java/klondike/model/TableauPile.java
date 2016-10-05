@@ -33,6 +33,7 @@ public class TableauPile extends CardList {
         super.setVisibleCards(super.getVisibleCards() - numberOfCards);
         if (super.getVisibleCards() == MIN_VISIBLE_CARDS && !this.isEmpty()) {
             this.getCard().setFlippedUp(true);
+            super.setVisibleCards(super.getVisibleCards() + 1);
         }
     }
 }

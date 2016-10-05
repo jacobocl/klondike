@@ -26,7 +26,7 @@ public class WasteToFoundationController extends MoveController {
     }
 
     public void moveCardsFromWasteToFoundation() {
-        Card cardOnTopWaste = super.removeCardFromWaste();
+        Card cardOnTopWaste = super.removeCard(CardListIndex.WASTE);
         CardListIndex foundationIndex = CardListIndex.foundationIndex(cardOnTopWaste.getSuit().ordinal());
         super.addCard(foundationIndex, cardOnTopWaste);
     }

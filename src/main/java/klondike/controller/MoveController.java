@@ -69,13 +69,13 @@ public abstract class MoveController extends Controller {
             return null;
         }
     }
-    
-    protected Card removeCardFromWaste(){
-        Card cardOnTopWaste = super.getCard(CardListIndex.WASTE);
-        super.removeCards(CardListIndex.WASTE, 1);
+
+    protected Card removeCard(CardListIndex cardListIndex) {
+        Card cardOnTopWaste = super.getCard(cardListIndex);
+        super.removeCards(cardListIndex, 1);
         return cardOnTopWaste;
     }
-    
+
     public void win() {
         super.setGameState(GameState.FINAL);
     }

@@ -85,7 +85,15 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(TableauPileToFoundationController tableauPileToFoundationController) {
-        new IO().writeln(tableauPileToFoundationController.getClass().getName());
+        int tableauPileNumber = new LimitedIntDialog("¿De qué escalera?", CardListIndex.numberOfTableauPiles()).read();
+        tableauPileToFoundationController.setTableauPileIndex(tableauPileNumber);
+        klondike.controller.Error error = tableauPileToFoundationController.validate();
+        if (error != null) {
+            new IO().writeln(error.toString());
+        } else {
+            tableauPileToFoundationController.moveCardsFromTableauPileToFoundation();
+            checkWin(tableauPileToFoundationController);
+        }
     }
 
     @Override

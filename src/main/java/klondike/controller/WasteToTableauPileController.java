@@ -31,7 +31,7 @@ public class WasteToTableauPileController extends MoveController {
     }
 
     public void moveCardsFromWasteToTableauPile() {
-        Card cardOnTopWaste = super.removeCardFromWaste();
+        Card cardOnTopWaste = super.removeCard(CardListIndex.WASTE);
         super.addCard(tableauPileIndex, cardOnTopWaste);
     }
 
