@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.11" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="klondike.controller.WasteToTableauPileController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/WasteToTableauPileController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="231" x="311" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="2" language="java" name="klondike.model.Suit" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/Suit.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="144" x="-5" y="1911"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="3" language="java" name="klondike.controller.Error" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/Error.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="247" x="109" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="4" language="java" name="klondike.view.KlondikeView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/KlondikeView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="181" x="337" y="671"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="klondike.Klondike" project="klondike" 
+    file="/klondike/src/main/java/klondike/Klondike.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="113" x="337" y="352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="klondike.controller.FoundationToTableauPileController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/FoundationToTableauPileController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="253" x="582" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="klondike.controller.TableauPileToTableauPileController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/TableauPileToTableauPileController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="253" x="875" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="klondike.view.WasteView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/WasteView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="137" x="490" y="352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="klondike.controller.WasteToFoundationController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/WasteToFoundationController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="231" x="1461" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="klondike.view.BoardView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/BoardView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="135" x="1455" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="klondike.view.TableauPileView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/TableauPileView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="227" x="667" y="352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="klondike.utils.ClosedInterval" project="klondike" 
+    file="/klondike/src/main/java/klondike/utils/ClosedInterval.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="127" x="2673" y="671"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="klondike.view.FoundationView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/FoundationView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="227" x="934" y="352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="klondike.model.Game" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/Game.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="236" x="674" y="972"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="15" language="java" name="klondike.controller.NotMoveControllerVisitor" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/NotMoveControllerVisitor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="166" x="337" y="972"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="16" language="java" name="klondike.view.MenuView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/MenuView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="239" x="1414" y="671"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="klondike.controller.WasteToStockController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/WasteToStockController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="205" x="1732" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="18" language="java" name="klondike.model.CardListIndex" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/CardListIndex.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="405" width="191" x="875" y="1911"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="19" language="java" name="klondike.model.Foundation" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/Foundation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="156" x="-697" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="20" language="java" name="klondike.model.Number" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/Number.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="333" width="198" x="179" y="1911"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="21" language="java" name="klondike.view.CardListView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/CardListView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="214" x="1201" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="klondike.controller.MenuController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/MenuController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="207" x="1146" y="972"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="klondike.utils.LimitedIntDialog" project="klondike" 
+    file="/klondike/src/main/java/klondike/utils/LimitedIntDialog.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="163" x="2637" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="klondike.controller.StockToWasteController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/StockToWasteController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="205" x="1977" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="25" language="java" name="klondike.model.GameState" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/GameState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="130" x="-279" y="1309"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="26" language="java" name="klondike.view.CardView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/CardView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="126" x="87" y="1309"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="klondike.utils.ClosedIntervalView" project="klondike" 
+    file="/klondike/src/main/java/klondike/utils/ClosedIntervalView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="227" x="2425" y="352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="klondike.model.Waste" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/Waste.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="156" x="-501" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="klondike.controller.NotMoveController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/NotMoveController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="156" x="1146" y="671"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="klondike.controller.TableauPileToFoundationController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/TableauPileToFoundationController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="253" x="1168" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="klondike.view.StockView" project="klondike" 
+    file="/klondike/src/main/java/klondike/view/StockView.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="133" x="1201" y="352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="klondike.controller.ExitController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/ExitController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="142" x="2222" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="klondike.model.Stock" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/Stock.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="156" x="-305" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="klondike.model.TableauPile" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/TableauPile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="156" x="-109" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="klondike.utils.IO" project="klondike" 
+    file="/klondike/src/main/java/klondike/utils/IO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="187" x="2425" y="671"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="klondike.controller.MoveController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/MoveController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="308" x="1374" y="1309"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="klondike.controller.StartController" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/StartController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="156" x="950" y="972"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="klondike.model.CardList" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/CardList.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="156" x="-109" y="1309"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="klondike.controller.Logic" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/Logic.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="186" x="920" y="671"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="klondike.model.Card" project="klondike" 
+    file="/klondike/src/main/java/klondike/model/Card.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="184" x="87" y="1610"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="41" language="java" name="klondike.controller.MoveControllerVisitor" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/MoveControllerVisitor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="239" x="1414" y="972"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="42" language="java" name="klondike.controller.Controller" project="klondike" 
+    file="/klondike/src/main/java/klondike/controller/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="236" x="1374" y="352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="43">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="44" name="controller"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="46">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <association id="47">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="48" name="tableauPileIndex"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="50">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <generalization id="51">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <association id="52">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="53" name="number"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="55">    
+    <bendpoint x="889" y="671"/>    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="56" name="game"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="58">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="59" name="closedInterval"/>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <association id="62">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="63" name="state"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="65">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <association id="66">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="67" name="menuController"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <association id="70">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="71" name="io"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="73">    
+    <bendpoint x="2394" y="352"/>    
+    <bendpoint x="2394" y="671"/>    
+    <bendpoint x="2394" y="972"/>    
+    <bendpoint x="2394" y="1309"/>    
+    <bendpoint x="2394" y="1610"/>    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="74" name="cardListIndex"/>      
+      <multiplicity id="75" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="77" name="startController"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="80" name="suit"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="82">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="83">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="84" name="listsOfCards"/>      
+      <multiplicity id="85" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="86">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <association id="87">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="88" name="tableauPileIndex"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="90">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <realization id="91">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <generalization id="92">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="93">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="94" name="cards"/>      
+      <multiplicity id="95" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="96">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="97" name="tableauPileOriginIndex"/>      
+      <multiplicity id="98" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="99">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <generalization id="100">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <generalization id="101">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="29"/>  
+  </generalization>  
+  <generalization id="102">    
+    <bendpoint x="1383" y="972"/>    
+    <bendpoint x="1383" y="671"/>    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <generalization id="103">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <generalization id="104">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <association id="105">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="106" name="foundationIndex"/>      
+      <multiplicity id="107" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="38"/>  
+  </generalization>  
+  <association id="109">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="110" name="controllers"/>      
+      <multiplicity id="111" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="112">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="113" name="tableauPileIndex"/>      
+      <multiplicity id="114" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="115">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="116" name="controller"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="118">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="119" name="tableauPileDestinationIndex"/>      
+      <multiplicity id="120" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="121">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="41"/>  
+  </realization>  
+  <association id="122">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="123" name="optionController"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="125">    
+    <bendpoint x="2682" y="352"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="126" name="limits"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="128">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="129" name="klondikeView"/>      
+      <multiplicity id="130" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="131">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="132" name="logic"/>      
+      <multiplicity id="133" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="134">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="21"/>  
+  </generalization>  
+  <association id="135">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="136" name="card"/>      
+      <multiplicity id="137" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="138">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="36"/>  
+  </generalization>  
+  <association id="139">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="140" name="game"/>      
+      <multiplicity id="141" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="142">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="42"/>  
+  </generalization>  
+  <association id="143">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="144" name="limitsView"/>      
+      <multiplicity id="145" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
