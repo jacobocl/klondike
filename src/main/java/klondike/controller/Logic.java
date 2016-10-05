@@ -17,7 +17,7 @@ public class Logic {
         }
 
         public NotMoveController getController() {
-            switch (game.getState()){
+            switch (game.getGameState()){
             case INITIAL:
                 return startController;
             case IN_GAME:

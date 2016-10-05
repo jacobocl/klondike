@@ -19,11 +19,6 @@ public class Waste extends CardList {
         super.addCards(cards);
         super.setVisibleCards(cards.size());
     }
-    
-    @Override
-    public List<Card> getCards(int numberOfCards) {
-        return super.getCards(numberOfCards);
-    }
 
     @Override
     public void remove(int numberOfCards) {

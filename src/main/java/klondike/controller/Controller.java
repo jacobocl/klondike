@@ -17,7 +17,7 @@ public abstract class Controller {
     }
 
     public GameState getState() {
-        return game.getState();
+        return game.getGameState();
     }
 
     public void setGameState(GameState state) {

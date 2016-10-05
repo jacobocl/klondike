@@ -34,9 +34,4 @@ public class Stock extends CardList {
         return cardsToGet;
     }
 
-    @Override
-    public void remove(int numberOfCards) {
-        super.remove(numberOfCards);
-    }
-
 }

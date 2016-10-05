@@ -26,7 +26,7 @@ public class Game {
         state = GameState.INITIAL;
     }
 
-    public GameState getState() {
+    public GameState getGameState() {
         return state;
     }
 

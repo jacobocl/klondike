@@ -19,9 +19,4 @@ public class Foundation extends CardList {
         super.addCards(cards);
     }
 
-    @Override
-    public void remove(int numberOfCards) {
-        super.remove(numberOfCards);
-    }
-
 }
