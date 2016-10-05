@@ -20,6 +20,10 @@ public class StockToWasteController extends MoveController {
         optionView.visit(this);
     }
 
+    public Error validateStockNotEmpty() {
+        return super.validateNotEmpty(CardListIndex.STOCK);
+    }
+
     public void moveCardsFromStockToWaste() {
         int cardsInStock = super.size(CardListIndex.STOCK);
         List<Card> cardsRetrievedFromStock;
@@ -35,13 +39,7 @@ public class StockToWasteController extends MoveController {
             card.setFlippedUp(true);
         }
         super.addCards(CardListIndex.WASTE, cardsRetrievedFromStock);
-    }
-    
-    public Error validateStock() {
-        if (super.isListOfCardsEmpty(CardListIndex.STOCK)) {
-            return Error.IS_EMPTY;
-        }
-        return null;
+        super.checkWin();
     }
 
 }

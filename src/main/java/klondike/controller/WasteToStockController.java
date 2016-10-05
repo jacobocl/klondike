@@ -17,12 +17,13 @@ public class WasteToStockController extends MoveController {
     public void accept(MenuView optionView) {
         optionView.visit(this);
     }
-
-    public Error validateWaste() {
-        if (!super.isListOfCardsEmpty(CardListIndex.STOCK)) {
-            return Error.IS_NOT_EMPTY;
+    
+    public Error validate() {
+        Error error = super.validateEmpty(CardListIndex.STOCK);
+        if (error == null) {
+            error = super.validateNotEmpty(CardListIndex.WASTE);
         }
-        return null;
+        return error;
     }
 
     public void moveCardsFromWasteToStock() {

@@ -3,12 +3,14 @@ package klondike.view;
 import klondike.controller.ExitController;
 import klondike.controller.FoundationToTableauPileController;
 import klondike.controller.MenuController;
+import klondike.controller.MoveController;
 import klondike.controller.StockToWasteController;
 import klondike.controller.TableauPileToFoundationController;
 import klondike.controller.TableauPileToTableauPileController;
 import klondike.controller.WasteToFoundationController;
 import klondike.controller.WasteToStockController;
 import klondike.controller.WasteToTableauPileController;
+import klondike.model.CardListIndex;
 import klondike.controller.MoveControllerVisitor;
 import klondike.utils.IO;
 import klondike.utils.LimitedIntDialog;
@@ -40,7 +42,7 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(StockToWasteController stockToWasteController) {
-        klondike.controller.Error error = stockToWasteController.validateStock();
+        klondike.controller.Error error = stockToWasteController.validateStockNotEmpty();
         if (error != null) {
             new IO().writeln(error.toString());
         } else {
@@ -50,7 +52,7 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(WasteToStockController wasteToStockController) {
-        klondike.controller.Error error = wasteToStockController.validateWaste();
+        klondike.controller.Error error = wasteToStockController.validate();
         if (error != null) {
             new IO().writeln(error.toString());
         } else {
@@ -60,12 +62,25 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(WasteToFoundationController wasteToFoundationController) {
-        new IO().writeln(wasteToFoundationController.getClass().getName());     
+        klondike.controller.Error error = wasteToFoundationController.validate();
+        if (error != null) {
+            new IO().writeln(error.toString());
+        } else {
+            wasteToFoundationController.moveCardsFromWasteToFoundation();
+            checkWin(wasteToFoundationController);
+        }
     }
 
     @Override
     public void visit(WasteToTableauPileController wasteToTableauPileController) {
-        new IO().writeln(wasteToTableauPileController.getClass().getName());
+        int tableauPileNumber = new LimitedIntDialog("¿A qué escalera?", CardListIndex.numberOfTableauPiles()).read();
+        wasteToTableauPileController.setTableauPileIndex(tableauPileNumber);
+        klondike.controller.Error error = wasteToTableauPileController.validate();
+        if (error != null) {
+            new IO().writeln(error.toString());
+        } else {
+            wasteToTableauPileController.moveCardsFromWasteToTableauPile();
+        }
     }
 
     @Override
@@ -86,6 +101,13 @@ public class MenuView implements MoveControllerVisitor {
     @Override
     public void visit(ExitController exitController) {
         new IO().writeln(exitController.getClass().getName());
+    }
+
+    private void checkWin(MoveController moveController) {
+        if (moveController.checkWin()) {
+            moveController.win();
+            new IO().writeln("¡¡ENHORABUENA, HAS GANADO!!");
+        }
     }
 
 }

@@ -30,9 +30,9 @@ public class Card {
         return number == Number.KING;
     }
 
-    public NumberDistance distanceBetweenCardNumber(Card card) {
+    public boolean isImmediateHigher(Card card) {
         assert card != null;
-        return this.number.distance(card.number);
+        return this.number.isImmediateHigher(card.number);
     }
     
     public void setFlippedUp(boolean flippedUp) {

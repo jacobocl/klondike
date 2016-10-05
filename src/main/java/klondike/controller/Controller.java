@@ -55,5 +55,9 @@ public abstract class Controller {
     public int size(CardListIndex cardListIndex) {
         return game.size(cardListIndex);
     }
+    
+    public boolean checkWin() {
+        return game.checkWin();
+    }
 
 }

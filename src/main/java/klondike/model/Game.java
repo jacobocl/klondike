@@ -11,6 +11,8 @@ public class Game {
 
     private GameState state;
 
+    private static final int CARDS_IN_FOUNDATION_MAX = 13;
+
     public Game() {
         listsOfCards = new HashMap<CardListIndex, CardList>();
         listsOfCards.put(CardListIndex.STOCK, new Stock());
@@ -66,5 +68,13 @@ public class Game {
 
     public int size(CardListIndex cardListIndex) {
         return listsOfCards.get(cardListIndex).size();
+    }
+
+    public boolean checkWin() {
+        CardList foundation1 = listsOfCards.get(CardListIndex.FOUNDATION_1);
+        CardList foundation2 = listsOfCards.get(CardListIndex.FOUNDATION_2);
+        CardList foundation3 = listsOfCards.get(CardListIndex.FOUNDATION_3);
+        CardList foundation4 = listsOfCards.get(CardListIndex.FOUNDATION_4);
+        return foundation1.size() == CARDS_IN_FOUNDATION_MAX && foundation2.size() == CARDS_IN_FOUNDATION_MAX && foundation3.size() == CARDS_IN_FOUNDATION_MAX && foundation4.size() == CARDS_IN_FOUNDATION_MAX;
     }
 }
