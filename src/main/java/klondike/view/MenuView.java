@@ -98,17 +98,38 @@ public class MenuView implements MoveControllerVisitor {
 
     @Override
     public void visit(TableauPileToTableauPileController tableauPileToTableauPileController) {
-        new IO().writeln(tableauPileToTableauPileController.getClass().getName());
+        int tableauPileOriginNumber = new LimitedIntDialog("¿De qué escalera?", CardListIndex.numberOfTableauPiles()).read();
+        tableauPileToTableauPileController.setTableauPileOriginIndex(tableauPileOriginNumber);
+        int numberOfCards = new IO().readInt("¿Cuántas?: ");
+        tableauPileToTableauPileController.setNumberOfCards(numberOfCards);
+        int tableauPileDestinationNumber = new LimitedIntDialog("¿A qué escalera?", CardListIndex.numberOfTableauPiles()).read();
+        tableauPileToTableauPileController.setTableauPileDestinationIndex(tableauPileDestinationNumber);
+        klondike.controller.Error error = tableauPileToTableauPileController.validate();
+        if (error != null) {
+            new IO().writeln(error.toString());
+        } else {
+            tableauPileToTableauPileController.moveCardsFromTableauPileToTableauPile();
+        }
     }
 
     @Override
     public void visit(FoundationToTableauPileController foundationToTableauPileController) {
-        new IO().writeln(foundationToTableauPileController.getClass().getName());
+        int foundationNumber = new LimitedIntDialog("¿De qué palo?", CardListIndex.numberOfFoundations()).read();
+        foundationToTableauPileController.setFoundationIndex(foundationNumber);
+        int tableauPileNumber = new LimitedIntDialog("¿A qué escalera?", CardListIndex.numberOfTableauPiles()).read();
+        foundationToTableauPileController.setTableauPileIndex(tableauPileNumber);
+        klondike.controller.Error error = foundationToTableauPileController.validate();
+        if (error != null) {
+            new IO().writeln(error.toString());
+        } else {
+            foundationToTableauPileController.moveCardsFromFoundationToTableauPile();
+        }
     }
 
     @Override
     public void visit(ExitController exitController) {
-        new IO().writeln(exitController.getClass().getName());
+        new IO().writeln("¡Adios!");
+        exitController.exit();
     }
 
     private void checkWin(MoveController moveController) {
